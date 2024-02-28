@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+				transition 过渡  元素的状态逐渐过渡到另一个状态
+				配合hover选择器一起使用
+				transition-property:需要过渡的属性
+				transition-duration ：过渡效果所需要花费的时间
+					s 秒   ms 毫秒
+				transition-timing-function  过渡效果的时间曲线
+					linear 以相同的时间进行
+					ease 开始慢 然后快 最后慢
+					ease-in 开始慢
+					ease-out 结束慢
+					ease-in-out 开始和结束慢
+				transition-delay 过渡的开始时间
+			 */
+			.c1{
+				width:200px;
+				height: 200px;
+				background-color: red;
+				/* transition-property: width,height,background-color; */
+				/* transition-property: all;
+				transition-duration: 3s;
+				transition-timing-function: ease-in-out;
+				transition-delay:2s; */
+				/* 
+					以相同的时间进行过渡效果
+					过渡效果所花费3秒
+					鼠标移入后2秒后开始过渡效果
+					添加过渡效果的属性为高度
+				 */
+				transition: linear width 3s,
+					linear 3s 4s background-color;
+			}
+			.c1:hover{
+				width: 1000px;
+				background-color: aqua;
+				border-radius: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="c1"></div>
+	</body>
+</html>
